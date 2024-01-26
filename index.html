@@ -18,9 +18,7 @@
 
             // 여기서 params는 보낼 데이터를 의미합니다.
             // 예시: { response: "사용자 응답" }
-            var params = {
-                response: "사용자 응답"
-            };
+            var params = "response=" + encodeURIComponent("사용자 응답");
 
             fetch(URL, {
                 method: 'POST',
