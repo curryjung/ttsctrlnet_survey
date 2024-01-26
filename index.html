@@ -27,10 +27,8 @@
                 body: JSON.stringify(params),
                 headers: {
                     'Content-Type': 'application/json'
-                },
-                mode: 'no-cors' // 이 모드를 추가
+                }
             })
-            
             .then(response => response.text())
             .then(data => {
                 console.log(data);
