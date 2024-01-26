@@ -25,18 +25,29 @@
 
         <script>
             document.addEventListener('DOMContentLoaded', function() {
-            // 모든 'section' 요소를 찾음
             var sections = document.querySelectorAll('section');
-
-            // 각 섹션에 대해 반복
-            sections.forEach(function(section, index) {
-                // 각 섹션 내의 모든 라디오 버튼을 찾음
-                var radioButtons = section.querySelectorAll('input[type="radio"]');
-
-                // 라디오 버튼에 고유한 이름 부여
-                radioButtons.forEach(function(radio) {
-                var originalName = radio.getAttribute('name');
-                radio.setAttribute('name', originalName + index);
+        
+            sections.forEach(function(section, sectionIndex) {
+                var questionGroups = section.querySelectorAll('.question');
+        
+                questionGroups.forEach(function(group, groupIndex) {
+                var radioButtons = group.querySelectorAll('input[type="radio"]');
+        
+                radioButtons.forEach(function(radio, idx) {
+                    var baseName = radio.getAttribute('name');
+                    var newName = baseName + '-section' + sectionIndex + '-group' + groupIndex;
+                    var newId = newName + '-option' + idx;
+        
+                    // 새로운 id 및 name 설정 전에 라벨의 for 속성 업데이트
+                    var label = group.querySelector('label[for="' + radio.id + '"]');
+                    if (label) {
+                    label.setAttribute('for', newId);
+                    }
+        
+                    // 이제 id 및 name 설정
+                    radio.setAttribute('id', newId);
+                    radio.setAttribute('name', newName);
+                });
                 });
             });
             });
@@ -849,7 +860,7 @@
               responses.push(checkedRadio.value);
             } else {
               allAnswered = false;
-              alert("모든 질문에 답해야 합니다.");
+              alert("모든 질문에 답해야 합니다. <br> Please answer all questions.");
               break;
             }
           }
