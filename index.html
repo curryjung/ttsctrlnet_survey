@@ -9,32 +9,10 @@
 
     <!-- JavaScript -->
     <script>
-        document.getElementById("submitBtn").addEventListener("click", function() {
-            sendData();
-        });
-
-        function sendData() {
-            var URL = "https://script.google.com/macros/s/AKfycbydHyrZ6CorxG70VDkdpDlXAOL6zcNtHZc433ntZP59Zclh1qv9m9k5IIxVmOuzugvecQ/exec";
-
-            // 여기서 params는 보낼 데이터를 의미합니다.
-            // 예시: { response: "사용자 응답" }
-            var params = "response=" + encodeURIComponent("사용자 응답");
-
-            fetch(URL, {
-                method: 'POST',
-                body: params,
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                }
-            })
-            .then(response => response.text())
-            .then(data => {
-                console.log(data);
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-            });
-        }
+    document.getElementById("submitBtn").addEventListener("click", function() {
+        // 사용자를 특정 URL로 리디렉션
+        window.location.href = "https://script.google.com/macros/s/AKfycbydHyrZ6CorxG70VDkdpDlXAOL6zcNtHZc433ntZP59Zclh1qv9m9k5IIxVmOuzugvecQ/exec?response=success";
+    });
     </script>
 </body>
 </html>
