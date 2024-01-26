@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>설문조사</title>
+</head>
+<body>
+    <!-- 버튼 추가 -->
+    <button id="submitBtn">제출</button>
+
+    <!-- JavaScript -->
+    <script>
+        document.getElementById("submitBtn").addEventListener("click", function() {
+            sendData();
+        });
+
+        function sendData() {
+            var URL = "https://script.google.com/macros/s/AKfycbydHyrZ6CorxG70VDkdpDlXAOL6zcNtHZc433ntZP59Zclh1qv9m9k5IIxVmOuzugvecQ/exec";
+
+            // 여기서 params는 보낼 데이터를 의미합니다.
+            // 예시: { response: "사용자 응답" }
+            var params = {
+                response: "사용자 응답"
+            };
+
+            fetch(URL, {
+                method: 'POST',
+                body: JSON.stringify(params),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.text())
+            .then(data => {
+                console.log(data);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
+</body>
+</html>
