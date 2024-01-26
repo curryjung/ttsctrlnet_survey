@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+
         <meta charset="utf-8">
         <meta name="description"
               content="Harnessing Text-to-Image Models for Text-to-Video Generation">
@@ -20,6 +21,25 @@
           gtag('js', new Date());
       
           gtag('config', 'G-PYVRSFMDRL');
+        </script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+            // 모든 'section' 요소를 찾음
+            var sections = document.querySelectorAll('section');
+
+            // 각 섹션에 대해 반복
+            sections.forEach(function(section, index) {
+                // 각 섹션 내의 모든 라디오 버튼을 찾음
+                var radioButtons = section.querySelectorAll('input[type="radio"]');
+
+                // 라디오 버튼에 고유한 이름 부여
+                radioButtons.forEach(function(radio) {
+                var originalName = radio.getAttribute('name');
+                radio.setAttribute('name', originalName + index);
+                });
+            });
+            });
         </script>
       
         <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
@@ -143,7 +163,7 @@
         
         <div class="question">
             <p class="question1"></p>
-            <input type="radio" id="motion1" name="motion" value="1">
+            <input type="radio" id="motion" name="motion" value="1">
             <label for="motion1">1번 영상 - 1st Video</label><br>
             <input type="radio" id="motion2" name="motion" value="2">
             <label for="motion2">2번 영상 - 2nd Video</label>
@@ -416,6 +436,7 @@
     <!-- 버튼 추가 -->
         <button id="submitBtn">최종제출(Submit) - 클릭 후 조금만 기다려주세요. Please wait for a while after click</button>
     </div>
+
 
     <script>
         // 질문 변수 설정
