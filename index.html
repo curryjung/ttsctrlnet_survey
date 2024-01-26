@@ -1,18 +1,485 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>설문조사</title>
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description"
+              content="Harnessing Text-to-Image Models for Text-to-Video Generation">
+        <meta name="keywords" content="text-to-video">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Harnessing Text-to-Image Models for Text-to-Video Generation</title>
+      
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+      
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+      
+          gtag('js', new Date());
+      
+          gtag('config', 'G-PYVRSFMDRL');
+        </script>
+      
+        <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+              rel="stylesheet">
+      
+        <link rel="stylesheet" href="./css/bulma.min.css">
+        <link rel="stylesheet" href="./css/bulma-carousel.min.css">
+        <link rel="stylesheet" href="./css/bulma-slider.min.css">
+        <link rel="stylesheet" href="./css/fontawesome.all.min.css">
+        <link rel="stylesheet"
+              href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+        <link rel="stylesheet" href="./css/index.css">
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script defer src="./js/fontawesome.all.min.js"></script>
+        <script src="./js/bulma-carousel.min.js"></script>
+        <script src="./js/bulma-slider.min.js"></script>
+        <script src="./js/index.js"></script>
+      </head>
 <body>
-    <!-- 버튼 추가 -->
-    <button id="submitBtn">제출</button>
 
-    <!-- JavaScript -->
+    <section class="hero">
+        <div class="hero-body">
+          <div class="container is-max-desktop">
+            <div class="columns is-centered">
+              <div class="column has-text-centered">
+                <h1 class="title is-1 publication-title">Text-to-Video Survey</h1>
+
+                <div class="is-size-5 publication-authors">
+                  <span class="author-block">Thank you for your participation!&nbsp; </span>
+      
+                </div>
+      
+                <!-- <h1 style="font-size:24px;font-weight:bold">Thank you!</h1> -->
+                
+                <div class="column has-text-centered">
+                  <div class="publication-links">
+                  </div>
+      
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="columns is-centered has-text-centered">
+        <h3 class="title is-4"> This content is optimized for desktop viewing and for Chrome. <br>It may not be suitable for mobile devices or other Web browser.</h3>
+      </div>
+
+      <br><br><br>
+    <div class="columns is-centered has-text-centered">
+        <h4 class="title is-5"> Please look at the questions and choose your options</h4>
+    </div>
+    <br><br><br>
+      <section>
+      <h2 class="subtitle has-text-centered">
+        A cute Teddy bear walking down 5th Avenue, beautiful sunset.
+      </h2>
+      
+      <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
+        <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
+          <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+              <source type="video/mp4" src="video/teddy.mp4" /> 
+          </video>
+          <figcaption>1</figcaption>
+        </figure>
+        <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
+            <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+                <source type="video/mp4" src="video/Cute_Teddy_bear_walking_down_MG40.mp4" /> 
+            </video>
+            <figcaption>2</figcaption>
+        </figure>
+        
+        <div class="question">
+            <p class="question1"></p>
+            <input type="radio" id="motion1" name="motion" value="1">
+            <label for="motion1">1번 영상 - 1st Video</label><br>
+            <input type="radio" id="motion2" name="motion" value="2">
+            <label for="motion2">2번 영상 - 2nd Video</label>
+        </div>
+        <div class="question">
+            <p class="question2"></p>
+            <input type="radio" id="consistency1" name="consistency" value="1">
+            <label for="consistency1">1번 영상 - 1st Video</label><br>
+            <input type="radio" id="consistency2" name="consistency" value="2">
+            <label for="consistency2">2번 영상 - 2nd Video</label>
+        </div>
+        <div class="question">
+            <p class="question3"></p>
+            <input type="radio" id="quality1" name="quality" value="1">
+            <label for="quality1">1번 영상 - 1st Video</label><br>
+            <input type="radio" id="quality2" name="quality" value="2">
+            <label for="quality2">2번 영상 - 2nd Video</label>
+        </div>
+      </div>
+      
+      </section>
+
+<!-- ============================= -->
+      <br>
+      <br>
+      <section>
+      <h2 class="subtitle has-text-centered">
+        A horse galloping through Van Gogh's painting.
+      </h2>
+      
+      <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
+        <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
+          <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+              <source type="video/mp4" src="video/A_horse_galloping_through_van__225_0_3_18_MG50___.mp4" /> 
+          </video>
+          <figcaption>1</figcaption>
+        </figure>
+        <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
+            <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+                <source type="video/mp4" src="video/Horse_gogh.mp4" /> 
+            </video>
+            <figcaption>2</figcaption>
+        </figure>
+        
+        <div class="question">
+            <p class="question1"></p>
+            <input type="radio" id="motion1" name="motion" value="1">
+            <label for="motion1">1번 영상 - 1st Video</label><br>
+            <input type="radio" id="motion2" name="motion" value="2">
+            <label for="motion2">2번 영상 - 2nd Video</label>
+        </div>
+        <div class="question">
+            <p class="question2"></p>
+            <input type="radio" id="consistency1" name="consistency" value="1">
+            <label for="consistency1">1번 영상 - 1st Video</label><br>
+            <input type="radio" id="consistency2" name="consistency" value="2">
+            <label for="consistency2">2번 영상 - 2nd Video</label>
+        </div>
+        <div class="question">
+            <p class="question3"></p>
+            <input type="radio" id="quality1" name="quality" value="1">
+            <label for="quality1">1번 영상 - 1st Video</label><br>
+            <input type="radio" id="quality2" name="quality" value="2">
+            <label for="quality2">2번 영상 - 2nd Video</label>
+        </div>
+      </div>
+      
+      </section>
+    <!-- ============================= -->
+    <!-- ============================= -->
+    <br>
+    <br>
+    <section>
+    <h2 class="subtitle has-text-centered">
+        An astronaut riding a horse.
+    </h2>
+    
+    <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
+      <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
+        <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+            <source type="video/mp4" src="video/riding_horse.mp4" /> 
+        </video>
+        <figcaption>1</figcaption>
+      </figure>
+      <figure style="flex-basis: calc(50% - 10px); max-width: calc(25% - 10px);">
+          <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+              <source type="video/mp4" src="video/Astronaut_riding_a_white_horse_W256H256_022_0_3_15_MG40___.mp4" /> 
+          </video>
+          <figcaption>2</figcaption>
+      </figure>
+      
+      <div class="question">
+          <p class="question1"></p>
+          <input type="radio" id="motion1" name="motion" value="1">
+          <label for="motion1">1번 영상 - 1st Video</label><br>
+          <input type="radio" id="motion2" name="motion" value="2">
+          <label for="motion2">2번 영상 - 2nd Video</label>
+      </div>
+      <div class="question">
+          <p class="question2"></p>
+          <input type="radio" id="consistency1" name="consistency" value="1">
+          <label for="consistency1">1번 영상 - 1st Video</label><br>
+          <input type="radio" id="consistency2" name="consistency" value="2">
+          <label for="consistency2">2번 영상 - 2nd Video</label>
+      </div>
+      <div class="question">
+          <p class="question3"></p>
+          <input type="radio" id="quality1" name="quality" value="1">
+          <label for="quality1">1번 영상 - 1st Video</label><br>
+          <input type="radio" id="quality2" name="quality" value="2">
+          <label for="quality2">2번 영상 - 2nd Video</label>
+      </div>
+    </div>
+    
+    </section>
+  <!-- ============================= -->
+      <!-- ============================= -->
+      <br>
+      <br>
+      <section>
+      <h2 class="subtitle has-text-centered">
+        Dog is swimming.
+      </h2>
+      
+      <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
+        <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
+          <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+              <source type="video/mp4" src="video/43-A-Golden-Retriever-swimming-in-the-pool,-A-beautiful-award-winning-5.mp4" /> 
+          </video>
+          <figcaption>1</figcaption>
+        </figure>
+        <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
+            <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+                <source type="video/mp4" src="video/dog_swim.mp4" /> 
+            </video>
+            <figcaption>2</figcaption>
+        </figure>
+        
+        <div class="question">
+            <p class="question1"></p>
+            <input type="radio" id="motion1" name="motion" value="1">
+            <label for="motion1">1번 영상 - 1st Video</label><br>
+            <input type="radio" id="motion2" name="motion" value="2">
+            <label for="motion2">2번 영상 - 2nd Video</label>
+        </div>
+        <div class="question">
+            <p class="question2"></p>
+            <input type="radio" id="consistency1" name="consistency" value="1">
+            <label for="consistency1">1번 영상 - 1st Video</label><br>
+            <input type="radio" id="consistency2" name="consistency" value="2">
+            <label for="consistency2">2번 영상 - 2nd Video</label>
+        </div>
+        <div class="question">
+            <p class="question3"></p>
+            <input type="radio" id="quality1" name="quality" value="1">
+            <label for="quality1">1번 영상 - 1st Video</label><br>
+            <input type="radio" id="quality2" name="quality" value="2">
+            <label for="quality2">2번 영상 - 2nd Video</label>
+        </div>
+      </div>
+      
+      </section>
+    <!-- ============================= -->
+
+
+
+
+
+
+
+
+        <!-- ============================= -->
+        <br>
+        <br>
+        <section>
+        <h2 class="subtitle has-text-centered">
+            A chihuahua in astronaut suit floating in space.
+        </h2>
+        
+        <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
+          <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
+            <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+                <source type="video/mp4" src="video/A_chihuahua_in_astronaut_suit__W432H256_025_0_3_19.mp4" /> 
+            </video>
+            <figcaption>1</figcaption>
+          </figure>
+          <figure style="flex-basis: calc(50% - 10px); max-width: calc(40% - 10px);">
+              <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+                  <source type="video/mp4" src="video/A_chihuahua_in_astronaut_suit_floating_in_space.mp4" /> 
+              </video>
+              <figcaption>2</figcaption>
+          </figure>
+          
+          <div class="question">
+              <p class="question1"></p>
+              <input type="radio" id="motion1" name="motion" value="1">
+              <label for="motion1">1번 영상 - 1st Video</label><br>
+              <input type="radio" id="motion2" name="motion" value="2">
+              <label for="motion2">2번 영상 - 2nd Video</label>
+          </div>
+          <div class="question">
+              <p class="question2"></p>
+              <input type="radio" id="consistency1" name="consistency" value="1">
+              <label for="consistency1">1번 영상 - 1st Video</label><br>
+              <input type="radio" id="consistency2" name="consistency" value="2">
+              <label for="consistency2">2번 영상 - 2nd Video</label>
+          </div>
+          <div class="question">
+              <p class="question3"></p>
+              <input type="radio" id="quality1" name="quality" value="1">
+              <label for="quality1">1번 영상 - 1st Video</label><br>
+              <input type="radio" id="quality2" name="quality" value="2">
+              <label for="quality2">2번 영상 - 2nd Video</label>
+          </div>
+        </div>
+        
+        </section>
+      <!-- ============================= -->
+              <!-- ============================= -->
+              <br>
+              <br>
+              <section>
+              <h2 class="subtitle has-text-centered">
+                  A cute rabbit eating grass.
+              </h2>
+              
+              <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
+                <figure style="flex-basis: calc(50% - 10px); max-width: calc(40% - 10px);">
+                  <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+                      <source type="video/mp4" src="video/A_cute_rabbit_is.mp4" /> 
+                  </video>
+                  <figcaption>1</figcaption>
+                </figure>
+                <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
+                    <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+                        <source type="video/mp4" src="video/58-A-rabbit-hopping-through-a-field-of-daisies_-5.mp4" /> 
+                    </video>
+                    <figcaption>2</figcaption>
+                </figure>
+                
+                <div class="question">
+                    <p class="question1"></p>
+                    <input type="radio" id="motion1" name="motion" value="1">
+                    <label for="motion1">1번 영상 - 1st Video</label><br>
+                    <input type="radio" id="motion2" name="motion" value="2">
+                    <label for="motion2">2번 영상 - 2nd Video</label>
+                </div>
+                <div class="question">
+                    <p class="question2"></p>
+                    <input type="radio" id="consistency1" name="consistency" value="1">
+                    <label for="consistency1">1번 영상 - 1st Video</label><br>
+                    <input type="radio" id="consistency2" name="consistency" value="2">
+                    <label for="consistency2">2번 영상 - 2nd Video</label>
+                </div>
+                <div class="question">
+                    <p class="question3"></p>
+                    <input type="radio" id="quality1" name="quality" value="1">
+                    <label for="quality1">1번 영상 - 1st Video</label><br>
+                    <input type="radio" id="quality2" name="quality" value="2">
+                    <label for="quality2">2번 영상 - 2nd Video</label>
+                </div>
+              </div>
+              
+              </section>
+            <!-- ============================= -->
+                  <!-- ============================= -->
+                  <br>
+                  <br>
+                  <section>
+                  <h2 class="subtitle has-text-centered">
+                    boat in the ocean.
+                  </h2>
+                  
+                  <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
+                    <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
+                      <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+                          <source type="video/mp4" src="video/Romantic_painting_of_a_ship_sa_W512H512_1110_0.3_7.5_MG40___.mp4" /> 
+                      </video>
+                      <figcaption>1</figcaption>
+                    </figure>
+                    <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
+                        <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+                            <source type="video/mp4" src="video/small_boat_in_the_ocean,_giant_Cthulhu_monster_coming_out.mp4" /> 
+                        </video>
+                        <figcaption>2</figcaption>
+                    </figure>
+                    
+                    <div class="question">
+                        <p class="question1"></p>
+                        <input type="radio" id="motion1" name="motion" value="1">
+                        <label for="motion1">1번 영상 - 1st Video</label><br>
+                        <input type="radio" id="motion2" name="motion" value="2">
+                        <label for="motion2">2번 영상 - 2nd Video</label>
+                    </div>
+                    <div class="question">
+                        <p class="question2"></p>
+                        <input type="radio" id="consistency1" name="consistency" value="1">
+                        <label for="consistency1">1번 영상 - 1st Video</label><br>
+                        <input type="radio" id="consistency2" name="consistency" value="2">
+                        <label for="consistency2">2번 영상 - 2nd Video</label>
+                    </div>
+                    <div class="question">
+                        <p class="question3"></p>
+                        <input type="radio" id="quality1" name="quality" value="1">
+                        <label for="quality1">1번 영상 - 1st Video</label><br>
+                        <input type="radio" id="quality2" name="quality" value="2">
+                        <label for="quality2">2번 영상 - 2nd Video</label>
+                    </div>
+                  </div>
+                  
+                  </section>
+                <!-- ============================= -->
+    
+      <br><br><br>
+      <div class="columns is-centered has-text-centered">
+        
+    <!-- 버튼 추가 -->
+        <button id="submitBtn">최종제출(Submit) - 클릭 후 조금만 기다려주세요. Please wait for a while after click</button>
+    </div>
+
+    <script>
+        // 질문 변수 설정
+        var question1Text = "<b>Q1.</b> 어떤 영상의 모션이 더 자연스러워 보이나요? <br> Which video appears to have more natural motion?";
+        var question2Text = "<b>Q2.</b> 어떤 동영상의 연속성과 일관성이 더 좋나요? <br> Which video has better continuity and consistency?";
+        var question3Text = "<b>Q3.</b> 어떤 동영상의 퀄리티가 더 좋나요? <br> Which video has better quality?";
+      
+        // 각 질문에 대한 텍스트를 모든 해당 클래스를 가진 요소에 삽입
+        var questions1 = document.getElementsByClassName('question1');
+        for (var i = 0; i < questions1.length; i++) {
+          questions1[i].innerHTML = question1Text;
+        }
+      
+        var questions2 = document.getElementsByClassName('question2');
+        for (var i = 0; i < questions2.length; i++) {
+          questions2[i].innerHTML = question2Text;
+        }
+      
+        var questions3 = document.getElementsByClassName('question3');
+        for (var i = 0; i < questions3.length; i++) {
+          questions3[i].innerHTML = question3Text;
+        }
+      </script>
+
+    <script>
+        function getFinalResponse() {
+          var questions = document.querySelectorAll('.question'); // 'question' 클래스를 가진 모든 질문 요소
+          var responses = [];
+          var allAnswered = true;
+      
+          for (var i = 0; i < questions.length; i++) {
+            var checkedRadio = questions[i].querySelector('input[type="radio"]:checked');
+            
+            if (checkedRadio) {
+              responses.push(checkedRadio.value);
+            } else {
+              allAnswered = false;
+              alert("모든 질문에 답해야 합니다.");
+              break;
+            }
+          }
+      
+          if (allAnswered) {
+            var finalResponse = responses.join("-");
+            console.log(finalResponse); // 최종 응답 확인
+            window.location.href = "https://script.google.com/macros/s/AKfycbydHyrZ6CorxG70VDkdpDlXAOL6zcNtHZc433ntZP59Zclh1qv9m9k5IIxVmOuzugvecQ/exec?response=" + finalResponse;
+            return finalResponse; // 여기서 finalResponse를 다른 곳에 사용할 수 있습니다.
+          } else {
+            return null; // 모든 질문에 답하지 않았다면 null 반환
+          }
+        }
+      
+        document.getElementById("submitBtn").addEventListener("click", function() {
+          getFinalResponse();
+        });
+      </script>
+
+
+    <!-- JavaScript
     <script>
     document.getElementById("submitBtn").addEventListener("click", function() {
         // 사용자를 특정 URL로 리디렉션
         window.location.href = "https://script.google.com/macros/s/AKfycbydHyrZ6CorxG70VDkdpDlXAOL6zcNtHZc433ntZP59Zclh1qv9m9k5IIxVmOuzugvecQ/exec?response=success";
     });
-    </script>
+    </script> -->
 </body>
 </html>
