@@ -52,6 +52,22 @@
                     });
                 });
             });
+
+            document.addEventListener('DOMContentLoaded', function () {
+                // 모든 <section> 태그를 선택
+                var sections = document.querySelectorAll('section');
+
+                // 각 <section> 태그에 대해 순회
+                sections.forEach(function (section, index) {
+                    // <h2> 태그를 찾음
+                    var subtitle = section.querySelector('.subtitle');
+
+                    // <h2> 태그가 존재하면 내용에 번호를 추가
+                    if (subtitle) {
+                        subtitle.textContent = (index) + '. ' + subtitle.textContent;
+                    }
+                });
+            });
         </script>
       
         <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
@@ -128,16 +144,16 @@
       
       <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
         <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-          <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+          <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
               <source type="video/mp4" src="video/teddy.mp4" /> 
           </video>
-          <figcaption>1</figcaption>
+          <figcaption>1번 영상, 1st video</figcaption>
         </figure>
         <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-            <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+            <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
                 <source type="video/mp4" src="video/Cute_Teddy_bear_walking_down_MG40.mp4" /> 
             </video>
-            <figcaption>2</figcaption>
+            <figcaption>2번 영상, 2nd video</figcaption>
         </figure>
         
         <div class="question">
@@ -175,16 +191,16 @@
       
       <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
         <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-          <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+          <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
               <source type="video/mp4" src="video/A_horse_galloping_through_van__225_0_3_18_MG50___.mp4" /> 
           </video>
-          <figcaption>1</figcaption>
+          <figcaption>1번 영상, 1st video</figcaption>
         </figure>
         <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-            <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+            <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
                 <source type="video/mp4" src="video/Horse_gogh.mp4" /> 
             </video>
-            <figcaption>2</figcaption>
+            <figcaption>2번 영상, 2nd video</figcaption>
         </figure>
         
         <div class="question">
@@ -222,16 +238,16 @@
     
     <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
       <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-        <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+        <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
             <source type="video/mp4" src="video/dog_picnic.mp4" /> 
         </video>
-        <figcaption>1</figcaption>
+        <figcaption>1번 영상, 1st video</figcaption>
       </figure>
       <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-          <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+          <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
               <source type="video/mp4" src="video/A_golden_retriever_has_a_picni_W432H256_113_0.3_9____.mp4" /> 
           </video>
-          <figcaption>2</figcaption>
+          <figcaption>2번 영상, 2nd video</figcaption>
       </figure>
       
       <div class="question">
@@ -269,16 +285,16 @@
     
     <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
       <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-        <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+        <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
             <source type="video/mp4" src="video/riding_horse.mp4" /> 
         </video>
-        <figcaption>1</figcaption>
+        <figcaption>1번 영상, 1st video</figcaption>
       </figure>
       <figure style="flex-basis: calc(50% - 10px); max-width: calc(25% - 10px);">
-          <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+          <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
               <source type="video/mp4" src="video/Astronaut_riding_a_white_horse_W256H256_022_0_3_15_MG40___.mp4" /> 
           </video>
-          <figcaption>2</figcaption>
+          <figcaption>2번 영상, 2nd video</figcaption>
       </figure>
       
       <div class="question">
@@ -316,16 +332,16 @@
       
       <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
         <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-          <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+          <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
               <source type="video/mp4" src="video/43-A-Golden-Retriever-swimming-in-the-pool,-A-beautiful-award-winning-5.mp4" /> 
           </video>
-          <figcaption>1</figcaption>
+          <figcaption>1번 영상, 1st video</figcaption>
         </figure>
         <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-            <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+            <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
                 <source type="video/mp4" src="video/dog_swim.mp4" /> 
             </video>
-            <figcaption>2</figcaption>
+            <figcaption>2번 영상, 2nd video</figcaption>
         </figure>
         
         <div class="question">
@@ -371,16 +387,16 @@
         
         <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
           <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-            <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+            <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
                 <source type="video/mp4" src="video/A_chihuahua_in_astronaut_suit__W432H256_025_0_3_19.mp4" /> 
             </video>
-            <figcaption>1</figcaption>
+            <figcaption>1번 영상, 1st video</figcaption>
           </figure>
           <figure  class="custom-video-container" style="flex-basis: calc(50% - 10px); max-width: calc(40% - 10px);">
-              <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+              <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
                   <source type="video/mp4" src="video/A_chihuahua_in_astronaut_suit_floating_in_space.mp4" /> 
               </video>
-              <figcaption>2</figcaption>
+              <figcaption>2번 영상, 2nd video</figcaption>
           </figure>
           
           <div class="question">
@@ -419,16 +435,16 @@
               <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
                 <figure class="custom-video-container">
                     <!-- <figure style="flex-basis: calc(50% - 10px); max-width: calc(40% - 10px);"> -->
-                  <video autoplay controls muted loop playsinline> 
+                  <video autoplay muted loop playsinline> 
                       <source type="video/mp4" src="video/A_cute_rabbit_is.mp4" /> 
                   </video>
-                  <figcaption>1</figcaption>
+                  <figcaption>1번 영상, 1st video</figcaption>
                 </figure>
                 <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-                    <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+                    <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
                         <source type="video/mp4" src="video/58-A-rabbit-hopping-through-a-field-of-daisies_-5.mp4" /> 
                     </video>
-                    <figcaption>2</figcaption>
+                    <figcaption>2번 영상, 2nd video</figcaption>
                 </figure>
                 
                 <div class="question">
@@ -466,16 +482,16 @@
                   
                   <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
                     <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-                      <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+                      <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
                           <source type="video/mp4" src="video/Romantic_painting_of_a_ship_sa_W512H512_1110_0.3_7.5_MG40___.mp4" /> 
                       </video>
-                      <figcaption>1</figcaption>
+                      <figcaption>1번 영상, 1st video</figcaption>
                     </figure>
                     <figure  class="custom-video-container" style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-                        <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+                        <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
                             <source type="video/mp4" src="video/small_boat_in_the_ocean,_giant_Cthulhu_monster_coming_out.mp4" /> 
                         </video>
-                        <figcaption>2</figcaption>
+                        <figcaption>2번 영상, 2nd video</figcaption>
                     </figure>
                     
                     <div class="question">
@@ -513,16 +529,16 @@
                       
                       <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
                         <figure  class="custom-video-container" style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-                          <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+                          <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
                               <source type="video/mp4" src="video/A_cute_groundhog_is_burrowing,_digging_a_hole,_wildlife_photography.mp4" /> 
                           </video>
-                          <figcaption>1</figcaption>
+                          <figcaption>1번 영상, 1st video</figcaption>
                         </figure>
                         <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-                            <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+                            <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
                                 <source type="video/mp4" src="video/A_cute_groundhog_is_burrowing,_W432H256_113_0.3_9____.mp4" /> 
                             </video>
-                            <figcaption>2</figcaption>
+                            <figcaption>2번 영상, 2nd video</figcaption>
                         </figure>
                         
                         <div class="question">
@@ -560,16 +576,16 @@
                   
                   <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
                     <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-                      <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+                      <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
                           <source type="video/mp4" src="video/A_tiger_is_eating_grass,_wildl_W512H512_97.5_0.3_7.5____.mp4" /> 
                       </video>
-                      <figcaption>1</figcaption>
+                      <figcaption>1번 영상, 1st video</figcaption>
                     </figure>
                     <figure class="custom-video-container" style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-                        <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+                        <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
                             <source type="video/mp4" src="video/A_tiger_is_eating_grass,_wildlife_photography,_photograph (1).mp4" /> 
                         </video>
-                        <figcaption>2</figcaption>
+                        <figcaption>2번 영상, 2nd video</figcaption>
                     </figure>
                     
                     <div class="question">
@@ -607,16 +623,16 @@
                 
                 <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
                 <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-                    <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+                    <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
                         <source type="video/mp4" src="video/gel.mp4" /> 
                     </video>
-                    <figcaption>1</figcaption>
+                    <figcaption>1번 영상, 1st video</figcaption>
                 </figure>
                 <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-                    <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+                    <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
                         <source type="video/mp4" src="video/17-Giant-jellyfish-floating-in-the-sky-like-balloons_-1.mp4" /> 
                     </video>
-                    <figcaption>2</figcaption>
+                    <figcaption>2번 영상, 2nd video</figcaption>
                 </figure>
                 
                 <div class="question">
@@ -654,16 +670,16 @@
                 
                 <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
                 <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-                    <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+                    <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
                         <source type="video/mp4" src="video/A_dog_looking_at_the_camera_wi_125_0_3_18_MG50___.mp4" /> 
                     </video>
-                    <figcaption>1</figcaption>
+                    <figcaption>1번 영상, 1st video</figcaption>
                 </figure>
                 <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-                    <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+                    <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
                         <source type="video/mp4" src="video/dog.mp4" /> 
                     </video>
-                    <figcaption>2</figcaption>
+                    <figcaption>2번 영상, 2nd video</figcaption>
                 </figure>
                 
                 <div class="question">
@@ -701,16 +717,16 @@
              
              <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
              <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-                 <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+                 <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
                      <source type="video/mp4" src="video/62-A-horse-trotting-along-a-beach-at-sunset_-0.mp4" /> 
                  </video>
-                 <figcaption>1</figcaption>
+                 <figcaption>1번 영상, 1st video</figcaption>
              </figure>
              <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-                 <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+                 <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
                      <source type="video/mp4" src="video/horese.mp4" /> 
                  </video>
-                 <figcaption>2</figcaption>
+                 <figcaption>2번 영상, 2nd video</figcaption>
              </figure>
              
              <div class="question">
@@ -748,16 +764,16 @@
          
          <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
          <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-             <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+             <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
                  <source type="video/mp4" src="video/ice.mp4" /> 
              </video>
-             <figcaption>1</figcaption>
+             <figcaption>1번 영상, 1st video</figcaption>
          </figure>
          <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-             <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+             <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
                  <source type="video/mp4" src="video/0-A-colossal-whale-swimming-under-a-frozen-iceberg,-illuminated-by-1.mp4" /> 
              </video>
-             <figcaption>2</figcaption>
+             <figcaption>2번 영상, 2nd video</figcaption>
          </figure>
          
          <div class="question">
@@ -795,16 +811,16 @@
      
      <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
      <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-         <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+         <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
              <source type="video/mp4" src="video/roket.mp4" /> 
          </video>
-         <figcaption>1</figcaption>
+         <figcaption>1번 영상, 1st video</figcaption>
      </figure>
      <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-         <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+         <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
              <source type="video/mp4" src="video/4-A-space-shuttle-launching-to-Mars.mp4" /> 
          </video>
-         <figcaption>2</figcaption>
+         <figcaption>2번 영상, 2nd video</figcaption>
      </figure>
      
      <div class="question">
@@ -842,16 +858,16 @@
       
       <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
       <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-          <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+          <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
               <source type="video/mp4" src="video/tmpq1q5grhf.mp4" /> 
           </video>
-          <figcaption>1</figcaption>
+          <figcaption>1번 영상, 1st video</figcaption>
       </figure>
       <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-          <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+          <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
               <source type="video/mp4" src="video/60-A-group-of-ducks-swimming-in-a-pond,-oil-painting-4.mp4" /> 
           </video>
-          <figcaption>2</figcaption>
+          <figcaption>2번 영상, 2nd video</figcaption>
       </figure>
       
       <div class="question">
@@ -890,16 +906,16 @@
       
       <div id="wrapper" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; text-align: center; gap: 20px; width: 60%; margin: auto;"> 
       <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-          <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+          <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
               <source type="video/mp4" src="video/drawing.mp4" /> 
           </video>
-          <figcaption>1</figcaption>
+          <figcaption>1번 영상, 1st video</figcaption>
       </figure>
       <figure style="flex-basis: calc(50% - 10px); max-width: calc(50% - 10px);">
-          <video autoplay controls muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
+          <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: contain;"> 
               <source type="video/mp4" src="video/redshift_style_Routermaster,_D_W512H512_310_0.3_7.5_MG40___.mp4" /> 
           </video>
-          <figcaption>2</figcaption>
+          <figcaption>2번 영상, 2nd video</figcaption>
       </figure>
       
       <div class="question">
@@ -972,7 +988,7 @@
                 responses.push(checkedRadio.value);
             } else {
                 allAnswered = false;
-                alert("모든 질문에 답해야 합니다. \n Please answer all questions.");
+                alert("질문 " + (Math.floor(i / 3) + 1) + "에 답해야 합니다. \n Please answer question number " + (Math.floor(i / 3) + 1) + ".");
                 break;
             }
         }
