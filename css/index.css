@@ -2,6 +2,23 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
+.custom-video-container {
+  flex-basis: calc(45% - 10px);
+  max-width: calc(50% - 10px);
+  overflow: hidden; /* 컨테이너 밖의 콘텐츠 숨김 */
+  position: relative; /* 포지션 컨텍스트 설정 */
+  /* padding-bottom: 5%; */
+}
+.custom-video-container video {
+  width: 100%; /* 비디오 너비를 컨테이너에 맞춤 */
+  height: 100%; /* 비디오 높이를 컨테이너 높이보다 5% 더 크게 설정 */
+  object-fit: contain;
+  position: relative;   /* top: 0; */
+}
+
+figure.custom-video-container video {
+  clip-path: inset(0 0 7% 0);
+}
 
 /* CSS to set a common size for images and GIFs */
 .media-size {
