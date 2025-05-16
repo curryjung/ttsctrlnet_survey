@@ -75,8 +75,11 @@
       <li>
         <strong>감정 표현 유사도</strong><br>
         기준 음성과 비교했을 때, 생성된 음성이 <em>같은 감정을 얼마나 잘 표현하고 있는지</em> 평가해 주세요.<br>
-        예: 기쁨, 분노, 슬픔 등의 감정이 잘 전달되는지<br>
-        <span style="color: #777;">1점: 감정이 잘 느껴지지 않음 / 5점: 감정이 명확하게 잘 전달됨</span>
+        예: 기쁨, 분노, 슬픔 등의 감정이 잘 전달되는지
+        <br>참조음성에서 차례대로 등장한 음성의 <strong>감정 순서</strong> 와 동일한 순서로 각 모델들이 음성을 생성했는지도 중요합니다.
+        <br> Part 2 에서는 <strong>하나의 참조 음성 내 두개의 감정이 차례대로 등장</strong>하므로, 각 모델들이 <strong>각 감정을 차례대로 잘 표현했는지도 중요</strong>합니다.
+         <br><strong>참조음성과  결과물을 끝까지 듣고 비교</strong> 하여 각 항목에 대한 점수를 매겨주세요.<br>
+        <span style="color: #777;">1점: 감정이 잘 전달되지 않음 / 5점: 감정이 시간대 별로 명확하게 잘 전달됨</span>
       </li>
     </ol>
   
@@ -1991,9 +1994,18 @@
         </div>
         <div class="part-section">
         <h2 class="part-title">Part 2: 감정 변화 평가</h2>
+
+
+        <h2 class="part-title"> 평가 항목 유의 !</h2>
+
+            <ol>
+                <li>Part 2의 참조 음성은 <strong>두개의 감정 음성이 차례대로 등장</strong>합니다. (예, 놀람 -> 화남)</li>
+                <li> 참조음성에서 차례대로 등장한 음성의 <strong>감정 순서</strong> 와 동일한 순서로 각 모델들이 음성을 생성했는지 평가합니다.</li>
+                <li> <strong>참조음성과  결과물을 끝까지 듣고 비교</strong> 하여 각 항목에 대한 점수를 매겨주세요.</li>
+                
         <div class="section">
         <h2>참조 음성 1</h2>
-        <audio controls src="audio/emochange_ref/F_spk_02-angrycalm.wav"></audio>
+        <audio controls src="audio/emochange_results/elate/F_spk_02-angrycalm.wav"></audio>
         <div class="result-audio">
         <h3>모델 A 결과</h3>
         <audio controls src="audio/emochange_results/elate/F_spk_02-angrycalm.wav"></audio>
