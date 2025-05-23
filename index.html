@@ -30,9 +30,6 @@
     <p>
       안녕하세요. 본 설문은 다양한 TTS (Text-to-Speech) 시스템에서 생성된 음성 샘플을 평가하여, 
       <strong>감정 표현 및 음질의 품질을 비교 분석</strong>하기 위한 목적을 가지고 있습니다.
-
-
-
     </p>
   
     <p>
@@ -91,6 +88,9 @@
     <ul>
       <li>긴 설문에 응해주셔서 감사합니다. 약 <strong> 30분 이상 </strong>소요될 예정입니다. 중간에 결과가 저장되지 않으니 설문도중 결과를 잃어버리지 않도록 유의해주세요.</li>
       <li>또한 모든 항목을 마무리해야 제출가능합니다. 제출버튼을 누르면 제출완료 페이지가 나오며 제출 버튼을 여러번 반복해서 누르지 않도록 유의해주세요.</li>
+      <li>테스트를 위해서 실제 설문조사하기 전, 아래 <strong>"모든 항목 체크"</strong> 버튼을 누르면 모든 항목이 5점으로 체크됩니다. 테스트 목적으로만 활용해주세요.</li> 
+      <input type="button" id="checkallbutton" value="모든 항목 체크">
+
     </ul>    
 
 
@@ -274,10 +274,10 @@
         </div>
         <div class="section">
         <h2>참조 음성 2</h2>
-        <audio controls src="audio/jvnv_ref/JVNV_F1_disgusted.wav"></audio>
+        <audio controls src="audio/jvnv_ref/JVNV_M1_surprised.wav"></audio>
         <div class="result-audio">
         <h3>모델 A 결과</h3>
-        <audio controls src="audio/jvnv_results/elate/JVNV_F1_disgusted.wav"></audio>
+        <audio controls src="audio/jvnv_results/elate/JVNV_M1_surprised.wav"></audio>
         <fieldset>
         <legend>목소리 유사도</legend>
         <label><input type="radio" name="voice_similarity_2_elate_part1" value="1">1점</label>
@@ -305,7 +305,7 @@
         </div>
         <div class="result-audio">
         <h3>모델 B 결과</h3>
-        <audio controls src="audio/jvnv_results/f5-tts/JVNV_F1_disgusted.wav"></audio>
+        <audio controls src="audio/jvnv_results/f5-tts/JVNV_M1_surprised.wav"></audio>
         <fieldset>
         <legend>목소리 유사도</legend>
         <label><input type="radio" name="voice_similarity_2_f5tts_part1" value="1">1점</label>
@@ -333,7 +333,7 @@
         </div>
         <div class="result-audio">
         <h3>모델 C 결과</h3>
-        <audio controls src="audio/jvnv_results/ours/JVNV_F1_disgusted.wav"></audio>
+        <audio controls src="audio/jvnv_results/ours/JVNV_M1_surprised.wav"></audio>
         <fieldset>
         <legend>목소리 유사도</legend>
         <label><input type="radio" name="voice_similarity_2_ours_part1" value="1">1점</label>
@@ -361,7 +361,7 @@
         </div>
         <div class="result-audio">
         <h3>모델 D 결과</h3>
-        <audio controls src="audio/jvnv_results/voicebox/JVNV_F1_disgusted.wav"></audio>
+        <audio controls src="audio/jvnv_results/voicebox/JVNV_M1_surprised.wav"></audio>
         <fieldset>
         <legend>목소리 유사도</legend>
         <label><input type="radio" name="voice_similarity_2_voicebox_part1" value="1">1점</label>
@@ -389,7 +389,7 @@
         </div>
         <div class="result-audio">
         <h3>모델 E 결과</h3>
-        <audio controls src="audio/jvnv_results/emoctrl/JVNV_F1_disgusted.wav"></audio>
+        <audio controls src="audio/jvnv_results/emoctrl/JVNV_M1_surprised.wav"></audio>
         <fieldset>
         <legend>목소리 유사도</legend>
         <label><input type="radio" name="voice_similarity_2_emoctrl_part1" value="1">1점</label>
@@ -417,7 +417,7 @@
         </div>
         <div class="result-audio">
         <h3>모델 F 결과</h3>
-        <audio controls src="audio/jvnv_results/seamless/JVNV_F1_disgusted.wav"></audio>
+        <audio controls src="audio/jvnv_results/seamless/JVNV_M1_surprised.wav"></audio>
         <fieldset>
         <legend>목소리 유사도</legend>
         <label><input type="radio" name="voice_similarity_2_seamless_part1" value="1">1점</label>
@@ -1822,10 +1822,10 @@
         </div>
         <div class="section">
         <h2>참조 음성 11</h2>
-        <audio controls src="audio/jvnv_ref/JVNV_M2_fearful.wav"></audio>
+        <audio controls src="audio/jvnv_ref/JVNV_M1_fearful.wav"></audio>
         <div class="result-audio">
         <h3>모델 A 결과</h3>
-        <audio controls src="audio/jvnv_results/elate/JVNV_M2_fearful.wav"></audio>
+        <audio controls src="audio/jvnv_results/elate/JVNV_M1_fearful.wav"></audio>
         <fieldset>
         <legend>목소리 유사도</legend>
         <label><input type="radio" name="voice_similarity_11_elate_part1" value="1">1점</label>
@@ -1853,7 +1853,7 @@
         </div>
         <div class="result-audio">
         <h3>모델 B 결과</h3>
-        <audio controls src="audio/jvnv_results/f5-tts/JVNV_M2_fearful.wav"></audio>
+        <audio controls src="audio/jvnv_results/f5-tts/JVNV_M1_fearful.wav"></audio>
         <fieldset>
         <legend>목소리 유사도</legend>
         <label><input type="radio" name="voice_similarity_11_f5tts_part1" value="1">1점</label>
@@ -1881,7 +1881,7 @@
         </div>
         <div class="result-audio">
         <h3>모델 C 결과</h3>
-        <audio controls src="audio/jvnv_results/ours/JVNV_M2_fearful.wav"></audio>
+        <audio controls src="audio/jvnv_results/ours/JVNV_M1_fearful.wav"></audio>
         <fieldset>
         <legend>목소리 유사도</legend>
         <label><input type="radio" name="voice_similarity_11_ours_part1" value="1">1점</label>
@@ -1909,7 +1909,7 @@
         </div>
         <div class="result-audio">
         <h3>모델 D 결과</h3>
-        <audio controls src="audio/jvnv_results/voicebox/JVNV_M2_fearful.wav"></audio>
+        <audio controls src="audio/jvnv_results/voicebox/JVNV_M1_fearful.wav"></audio>
         <fieldset>
         <legend>목소리 유사도</legend>
         <label><input type="radio" name="voice_similarity_11_voicebox_part1" value="1">1점</label>
@@ -1937,7 +1937,7 @@
         </div>
         <div class="result-audio">
         <h3>모델 E 결과</h3>
-        <audio controls src="audio/jvnv_results/emoctrl/JVNV_M2_fearful.wav"></audio>
+        <audio controls src="audio/jvnv_results/emoctrl/JVNV_M1_fearful.wav"></audio>
         <fieldset>
         <legend>목소리 유사도</legend>
         <label><input type="radio" name="voice_similarity_11_emoctrl_part1" value="1">1점</label>
@@ -1965,7 +1965,7 @@
         </div>
         <div class="result-audio">
         <h3>모델 F 결과</h3>
-        <audio controls src="audio/jvnv_results/seamless/JVNV_M2_fearful.wav"></audio>
+        <audio controls src="audio/jvnv_results/seamless/JVNV_M1_fearful.wav"></audio>
         <fieldset>
         <legend>목소리 유사도</legend>
         <label><input type="radio" name="voice_similarity_11_seamless_part1" value="1">1점</label>
@@ -1995,13 +1995,39 @@
         <div class="part-section">
         <h2 class="part-title">Part 2: 감정 변화 평가</h2>
 
+        
 
-        <h2 class="part-title"> 평가 항목 유의 !</h2>
+        <ol>
+          <li>
+            <strong>목소리 유사도</strong><br>
+            생성된 음성이 기준 음성과 얼마나 같은 사람처럼 들리는지 평가합니다.<br>
+            예: 발화 톤, 억양, 음색의 유사성<br>
+            <span class="guide">1점: 전혀 다른 사람 같음 / 5점: 완전히 동일한 화자 같음</span>
+          </li>
+      
+          <li>
+            <strong>자연스러움</strong><br>
+            생성 음성이 얼마나 자연스럽게 들리는지 평가합니다.<br>
+            <span class="guide">1점: 매우 부자연스러움 / 5점: 사람의 발화처럼 자연스러움</span>
+          </li>
+      
+          <li>
+            <strong>감정 표현 유사도</strong><br>
+            기준 음성과 비교해 생성된 음성이 <strong></strong>두 개의 감정을 순서대로 얼마나 잘 표현하는지</strong> 평가합니다.<br>
+            - <strong>감정의 구별 여부</strong><br>
+            - <strong>각 감정의 전달력</strong><br>
+            - <strong></strong>참조 음성과 동일한 감정 순서로 표현되었는지</strong><br><br>
+            <span class="guide">
+              1점: 감정이 구별되지 않고 하나도 전달되지 않음<br>
+              2점: 감정이 구별되지 않거나 하나만 전달됨<br>
+              3점: 두 감정이 구별되나 전달력은 약함<br>
+              4점: 두 감정이 구별되고 하나는 정확히 전달됨<br>
+              5점: 두 감정 모두 명확히 구별되고 정확히 전달됨
+            </span>
+          </li>
+        </ol>
 
-            <ol>
-                <li>Part 2의 참조 음성은 <strong>두개의 감정 음성이 차례대로 등장</strong>합니다. (예, 놀람 -> 화남)</li>
-                <li> 참조음성에서 차례대로 등장한 음성의 <strong>감정 순서</strong> 와 동일한 순서로 각 모델들이 음성을 생성했는지 평가합니다.</li>
-                <li> <strong>참조음성과  결과물을 끝까지 듣고 비교</strong> 하여 각 항목에 대한 점수를 매겨주세요.</li>
+
                 
         <div class="section">
         <h2>참조 음성 1</h2>
@@ -3305,12 +3331,20 @@
         const finalResponse = responseParts.join('-');
 
         // 전송
-        window.location.href = "https://script.google.com/macros/s/AKfycbxhaTU9d-qEPnHyCZsV0jq-mtoC68pLDmf_l-HSVIs9rWYdlhtNGfw5irBwQvrd6bEHHA/exec?response=" + finalResponse;
+        window.location.href = "https://script.google.com/macros/s/AKfycbx1YniybbvcAxi3zCkb1avxAACkkM6ferBNtQ9yX3TJ9cgJhDMUQwunEfu-0GxrxDxC/exec?response=" + finalResponse;
     }
 
     document.getElementById("submitBtn").addEventListener("click", function() {
         calculateAverages();
     });
+
+    document.getElementById("checkallbutton").addEventListener("click", function() {
+        const allInputs = document.querySelectorAll('input');
+        allInputs.forEach(input => {
+            input.checked = true;
+        });
+    });
+
 </script>
 </body>
 </html>
